@@ -3,7 +3,7 @@
 // Complete JavaScript Application
 // ========================================
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://memoryverse-ai-603s.onrender.com";
 
 // HTML ELEMENTS
 const memoryText = document.getElementById("memoryText");
