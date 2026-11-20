@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemoryVerse AI | Memories are Life</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="logo">
+            <span>✿</span> MEMORYVERSE AI
+        </div>
+
+        <div class="top-actions">
+            <button type="button">👤 Profile</button>
+            <button type="button" id="settingsBtn">Settings ⚙</button>
+        </div>
+    </header>
+
+    <div class="app-container">
+
+        <aside class="sidebar">
+
+            <button class="new-memory-btn" id="newMemoryBtn">
+                ＋ New Memory
+            </button>
+
+            <nav>
+                <button class="nav-item active" data-view="home">🏠 Home</button>
+                <button class="nav-item" data-view="memories">📁 Stored Memories</button>
+                <button class="nav-item" data-view="search">🔍 Search</button>
+                <button class="nav-item" data-view="settings">⚙ Settings</button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div>♥</div>
+                <p>Keep your<br>memories alive...</p>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+
+            <section class="hero">
+
+                <div class="hero-text">
+                    <h1>Memories are <span>Life.</span></h1>
+                    <p>Every moment deserves to be remembered.</p>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="assets/memory-illustration.png"
+                         alt="MemoryVerse AI illustration">
+                </div>
+
+            </section>
+
+            <section class="search-container">
+                <span>🔍</span>
+
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Search your memories...">
+
+                <button id="searchBtn">Search</button>
+            </section>
+
+            <section class="memory-box">
+
+                <div class="memory-icon">📝</div>
+
+                <div class="memory-content">
+
+                    <h2>Write Your Memory</h2>
+
+                    <textarea
+                        id="memoryText"
+                        maxlength="1000"
+                        placeholder="Share your thoughts, moments or experiences..."></textarea>
+
+                    <div class="character-count">
+                        <span id="charCount">0</span> / 1000
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="action-buttons">
+
+                <button class="record-btn" id="recordBtn">
+                    🎙
+                    <span>
+                        <strong>Record Memory</strong>
+                        <small id="recordHint">Speak and let AI transcribe</small>
+                    </span>
+                </button>
+
+                <button class="save-btn" id="saveBtn">
+                    ▣
+                    <span>
+                        <strong id="saveButtonText">Save Memory</strong>
+                        <small>Keep it forever</small>
+                    </span>
+                </button>
+
+            </section>
+
+            <section class="saved-section" id="savedSection">
+
+                <div class="section-heading">
+                    <h2>Recent Memories</h2>
+                </div>
+
+                <div id="memoryList" class="memory-list">
+                    <div class="empty-state">
+                        <span>♡</span>
+                        <p>Your saved memories will appear here.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="./script.js?v=2"></script>
+
+</body>
+</html>
