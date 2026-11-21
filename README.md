@@ -59,3 +59,4 @@ python -m pytest -v
 - Cloud deployment
 
 **MemoryVerse AI — Memories are Life.**
+Continuous Deployment enabled for MemoryVerse AI!
