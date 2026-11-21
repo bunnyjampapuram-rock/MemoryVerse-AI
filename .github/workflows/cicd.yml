@@ -59,3 +59,37 @@ jobs:
           DEPLOY_HOOK: ${{ secrets.RENDER_FRONTEND_DEPLOY_HOOK }}
         run: |
           curl --fail --silent --show-error "$DEPLOY_HOOK"
+
+      - name: Verify Backend Deployment
+        run: |
+          echo "Checking backend health..."
+
+          for i in {1..60}; do
+            if curl --fail --silent https://memoryverse-ai-603s.onrender.com/health; then
+              echo "Backend deployment verified successfully!"
+              exit 0
+            fi
+
+            echo "Backend is not ready. Retrying in 10 seconds..."
+            sleep 10
+          done
+
+          echo "Backend health check failed!"
+          exit 1
+
+      - name: Verify Frontend Deployment
+        run: |
+          echo "Checking frontend availability..."
+
+          for i in {1..60}; do
+            if curl --fail --silent --output /dev/null https://memoryverse-ai-frontend.onrender.com; then
+              echo "Frontend deployment verified successfully!"
+              exit 0
+            fi
+
+            echo "Frontend is not ready. Retrying in 10 seconds..."
+            sleep 10
+          done
+
+          echo "Frontend health check failed!"
+          exit 1
