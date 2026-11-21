@@ -1,5 +1,24 @@
 # MemoryVerse AI
 
+
+## 🚀 Live Application
+
+**Try MemoryVerse AI:**  
+🌐 [Open Live Application](https://memoryverse-ai-frontend.onrender.com)
+
+**Backend API:**  
+⚙️ [Backend Service](https://memoryverse-ai-603s.onrender.com)
+
+**API Documentation:**  
+📘 [Explore API Documentation](https://memoryverse-ai-603s.onrender.com/docs)
+
+### Features
+- Save memories with custom titles.
+- Search stored memories.
+- Edit and delete memories.
+- Access your memories through a web interface.
+- FastAPI-powered backend.
+
 **Memories are Life. Keep Your Memories Alive.**
 
 MemoryVerse AI is a personal memory storage application that allows users to save, view, search, update, and delete their memories.
